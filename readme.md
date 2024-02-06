@@ -1,3 +1,9 @@
+<p align="center">
+  <a href="https://github.com/imtangim/uptime-monitoring-api-raw-node">
+  </a>
+  <h3 align="center">Raw Node.js Project - Uptime Monitoring API</h3>
+</p>
+
 <!-- HOW TO RUN -->
 
 ## How to run
@@ -156,3 +162,14 @@ This route is needed for adding the urls that you want to check.
 
     -  You don't need to send body payload.
 
+
+
+## Contact
+
+<b>Tangim Haque</b>: [tanjim437@gmail.com](mailto:tanjim437@gmail.com)
+
+<b>Portfolio</b>: [tangim.me](https://tangim.me)
+
+<b>Project Link</b>: [https://github.com/imtangim/uptime-monitoring-api-raw-node](https://github.com/imtangim/uptime-monitoring-api-raw-node)
+
+<b>Youtube Channel</b>: [https://youtube.com/@wittywidgets](https://youtube.com/@wittywidgets)
