@@ -134,7 +134,7 @@ This route is needed for adding the urls that you want to check.
 
     -  You don't need to send body payload.
 
-3. <b>PUT</b> Method: Updating user info.
+3. <b>PUT</b> Method: Updating Check.
 
     - Url: http://localhost:3000/check
 
@@ -150,7 +150,7 @@ This route is needed for adding the urls that you want to check.
     }  
     ```
     -  You can send any item for update individually or with the whole m   group in body but id must need to be added.
-4. <b>DELETE</b> Method: Delete the user.
+4. <b>DELETE</b> Method: Delete the check.
 
     - Url: http://localhost:3000/check?id="id-of-the-desired-check"
 
