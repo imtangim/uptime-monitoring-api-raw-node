@@ -12,9 +12,9 @@ enviroments.staging={
     secretKey : "wqeurewyfgrvhsfv5ada",
     maxChecks:5,
     twilio:{
-        fromPhone:'+14783758917',
-        sid:'ACae8a9feecfc45642118e71f1e42ccd68',
-        token:'dc07d4d94c0dea968c4e0946164bf377',
+        fromPhone:'twilio-number',
+        sid:'twilio-sid',
+        token:'twilio-token',
     }
 }
 enviroments.production={
@@ -23,9 +23,9 @@ enviroments.production={
     secretKey : "dadghasdghfdsga",
     maxChecks:5,
     twilio:{
-        fromPhone:'+14783758917',
-        sid:'ACae8a9feecfc45642118e71f1e42ccd68',
-        token:'dc07d4d94c0dea968c4e0946164bf377',
+        fromPhone:'twilio-number',
+        sid:'twilio-sid',
+        token:'twilio-token',
     }
 }
 

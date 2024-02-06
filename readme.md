@@ -12,7 +12,7 @@ Please follow the below instructions to run this project in your machine:
 
 1. Clone this repository
    ```sh
-   git clone https://github.com//uptime-monitoring-api-raw-node.git
+   git clone https://github.com/imtangim/uptime-monitoring-api-raw-node.git
    ```
 2. Go into cloned directory
    ```sh
@@ -22,21 +22,54 @@ Please follow the below instructions to run this project in your machine:
    ```sh
    npm install
    ```
-4. Switch to specific branch for example lesson-2
-   ```sh
-   git checkout lesson-2
-   ```
-5. Run the app
+4. Run the app
    ```sh
    npm start
    ```
-6. Your app should be available in http://localhost:3000
+5. Your app should be available in http://localhost:3000
+
+## Configure twilio for SMS Alert
+
+- Go to ```enviroment.js``` (path: helpers/enviroments.js) and set:
+
+    - For ```staging```:
+    
+        ```sh
+        enviroments.staging={
+                port:3000,
+                env_name :"staging",
+                secretKey : "set-your-prefered-secret-key",
+                maxChecks:5,
+                twilio:{
+                    fromPhone:'twilio-number',
+                    sid:'twilio-sid',
+                    token:'twilio-token',
+                }
+            }
+        ```
+    - For ```Production```:
+
+        
+        ```sh
+        enviroments.production={
+                port:3000,
+                env_name :"staging",
+                secretKey : "set-your-prefered-secret-key",
+                maxChecks:5,
+                twilio:{
+                    fromPhone:'twilio-number',
+                    sid:'twilio-sid',
+                    token:'twilio-token',
+                }
+            }
+        ```
+
 
 ## User Route
 
-1. <b>POST</b> Method: Creating new user.
+1. <b>```POST```</b> Method: Creating new user.
 
-* Url: http://localhost:3000/user
+* ```Url```: http://localhost:3000/user
 
     ```sh
     {
@@ -47,15 +80,15 @@ Please follow the below instructions to run this project in your machine:
         "tosAgreement":true
     }   
     ```
-2. <b>GET</b> Method: Get user info.
+2. <b>```GET```</b> Method: Get user info.
 
-    - Url: http://localhost:3000/user?phone="phone-number"
+    - ```Url```: http://localhost:3000/user?phone="phone-number"
 
     -  You don't need to send body payload.
 
-3. <b>PUT</b> Method: Updating user info.
+3. <b>```PUT```</b> Method: Updating user info.
 
-    - Url: http://localhost:3000/user?id="need-to-login-for-token"
+    - ```Url```: http://localhost:3000/user?id="need-to-login-for-token"
 
     ```sh
     {
@@ -66,16 +99,16 @@ Please follow the below instructions to run this project in your machine:
     }   
     ```
     -  You can send any item for update individually or with the whole group in body.
-4. <b>DELETE</b> Method: Delete the user.
+4. <b>```DELETE```</b> Method: Delete the user.
 
     - Url: http://localhost:3000/user?id="need-to-login-for-token"
 
     -  You don't need to send body payload.
 ## Signin Route
 
-1. <b>POST</b> Method: login user.
+1. <b>```POST```</b> Method: login user.
 
-* Url: http://localhost:3000/token
+* ```Url```: http://localhost:3000/token
 
     ```sh
     {
@@ -83,16 +116,16 @@ Please follow the below instructions to run this project in your machine:
         "password":"Jerin4103@"
     }  
     ```
-    - Token has 1 hour validity only.
-2. <b>GET</b> Method: Get the token details.
+    - Token has ```1 hour``` validity only.
+2. <b>```GET```</b> Method: Get the token details.
 
-    - Url: http://localhost:3000/token?id="token-id"
+    - ```Url```: http://localhost:3000/token?id="token-id"
 
     -  You don't need to send body payload.
 
-3. <b>PUT</b> Method: Extend the token period.
+3. <b>```PUT```</b> Method: Extend the token period.
 
-    - Url: http://localhost:3000/token
+    - ```Url```: http://localhost:3000/token
 
     ```sh
     {
@@ -101,20 +134,20 @@ Please follow the below instructions to run this project in your machine:
     }   
     ```
     -  You can send any item for update individually or with the whole group in body.
-4. <b>DELETE</b> Method: Delete token.
+4. <b>```DELETE```</b> Method: Delete token.
 
-    - Url: http://localhost:3000/token?id="token-id"
+    - ```Url```: http://localhost:3000/token?id="token-id"
 
-    -  You don't need to send body payload.
+    -  You don't need to send body ```payload```.
 
 
-<b>Note:</b> Pre-made method is available to verify the token. 
+<b>```Note:```</b> Pre-made method is available to verify the ```token```. 
 ## Check Route
 This route is needed for adding the urls that you want to check.
 
-1. <b>POST</b> Method: Creating new check.
+1. <b>```POST```</b> Method: Creating new check.
 
-* Url: http://localhost:3000/check
+* ```Url```: http://localhost:3000/check
 
     ```sh
     {
@@ -131,18 +164,18 @@ This route is needed for adding the urls that you want to check.
     - Add the all the success code that your desired website has defined as successful request.
     - Add the method of your request.
     - Add the protocol of your request.
-    - Your desired timeout but not more than 4 sec.
-    - You can only add 5 checks at a time.
+    - Your desired timeout but not more than ```4 sec```.
+    - You can only add ```5 checks``` at a time.
     
-2. <b>GET</b> Method: Get check info.
+2. <b>```GET```</b> Method: Get check info.
 
-    - Url: http://localhost:3000/check?id="your-check-id"
+    - ```Url```: http://localhost:3000/check?id="your-check-id"
 
-    -  You don't need to send body payload.
+    -  You don't need to send body ```payload```.
 
-3. <b>PUT</b> Method: Updating Check.
+3. <b>```PUT```</b> Method: Updating Check.
 
-    - Url: http://localhost:3000/check
+    - ```Url```: http://localhost:3000/check
 
     ```sh
     {
@@ -156,11 +189,11 @@ This route is needed for adding the urls that you want to check.
     }  
     ```
     -  You can send any item for update individually or with the whole m   group in body but id must need to be added.
-4. <b>DELETE</b> Method: Delete the check.
+4. <b>```DELETE```</b> Method: Delete the check.
 
-    - Url: http://localhost:3000/check?id="id-of-the-desired-check"
+    - ```Url```: http://localhost:3000/check?id="id-of-the-desired-check"
 
-    -  You don't need to send body payload.
+    -  You don't need to send body ```payload```.
 
 
 
