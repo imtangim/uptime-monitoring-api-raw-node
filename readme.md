@@ -112,8 +112,8 @@ Please follow the below instructions to run this project in your machine:
 
     ```sh
     {
-        "phone":"01610006484",
-        "password":"Jerin4103@"
+        "phone":"016XXXX6484",
+        "password":"John123@"
     }  
     ```
     - Token has ```1 hour``` validity only.
